@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+android:layout_marginTop="20dp"
+            android:background="@android:drawable/dialog_holo_light_frame"
+
+
+            tools:layout_editor_absoluteY="58dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fecha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="end"
+                    android:text="12/12/1999"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/ABLUE"
+                    android:textSize="14sp" />
+                <TextView
+                    android:id="@+id/info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textAlignment="center"
+                    android:text="Total"
+                    android:textColor="@color/ABLUE"
+                    android:textSize="21sp"
+                    android:gravity="center_horizontal" />
+
+
+
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="$0.00"
+                    android:textAlignment="center"
+                    android:textColor="@color/ABLUE"
+                    android:textSize="30sp"
+                    app:layout_constraintTop_toBottomOf="@id/fecha" />
+
+                <TextView
+                    android:id="@+id/textototal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Cantidad"
+                    android:textColor="@color/ABLUE"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/total" />
+                <Button
+                    android:id="@+id/paga"
+                        android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Realizar Corte"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    style="@style/btnred"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toBottomOf="@id/total" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/card"
+            android:id="@+id/paggg"
+            >
+            <TextView
+                android:id="@+id/pag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="CORTES:"
+                android:textColor="@color/ABLUE"
+                android:textSize="24sp"
+                />
+
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listapagos"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:tag="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/paggg" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Infracciones">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/tituloma"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:fontFamily="sans-serif"
+                    android:foregroundGravity="center"
+                    android:freezesText="true"
+                    android:gravity="center"
+                    android:lines="2"
+                    android:background="@color/ABLUE"
+                    android:singleLine="true"
+                    android:text="Agregar decuento"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:id="@+id/spinerl"
+                    android:layout_below="@id/tituloma"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/t3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_below="@+id/dmodelo"
+                        android:text="Porcentaje de descuento:"
+
+
+                        android:textColor="@color/ABLUE"
+                        android:textSize="14dp" />
+
+                    <Spinner
+                        android:id="@+id/faltaa"
+                        style="@style/spinner_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_below="@id/t3"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:foregroundTint="@color/white" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_weight="1"
+                        android:tint="@color/white"
+                        app:srcCompat="@android:drawable/arrow_down_float" />
+
+                </RelativeLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/l10"
+                    android:layout_below="@id/spinerl"
+                    android:weightSum="4"
+                    >
+                    <TextView
+                        android:id="@+id/t6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="INE FRONTAL:"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:textColor="@color/ABLUE"
+                        android:textSize="14dp" />
+
+
+                    <ImageView
+                        android:id="@+id/INEADELANTE"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/ll9"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@android:drawable/ic_menu_camera" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:id="@+id/l11"
+                    android:layout_below="@id/l10"
+                    android:weightSum="4"
+                    >
+                    <TextView
+                        android:id="@+id/t7"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="INE FRONTAL:"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:textColor="@color/ABLUE"
+                        android:textSize="14dp" />
+
+
+                    <ImageView
+                        android:id="@+id/INETRAS"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/ll9"
+
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="10dp"
+                        app:srcCompat="@android:drawable/ic_menu_camera" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll7"
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_below="@id/l11"
+                    android:layout_marginTop="7dp"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+                    <TextView
+                        android:id="@+id/t00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Costo 2.4 UMAS:"
+
+
+                        android:textColor="@color/ABLUE"
+                        android:textSize="14dp" />
+
+                    <EditText
+                        android:id="@+id/ncostos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/t00"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginEnd="10dp"
+                        android:enabled="false"
+                        android:text="$200.00"
+                        android:textColor="@color/ablack"
+                        android:textSize="14dp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@color/ABLUE" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ll7"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    style="@style/btnred"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Continuar"
+                    />
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+android:layout_below="@id/button4"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    style="@style/btnred"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="cancelar"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

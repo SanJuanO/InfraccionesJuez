@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Pagos_pagados">
+
+
+    <TextView
+        android:id="@+id/pptitulo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/ABLUE"
+        android:foregroundGravity="center"
+        android:freezesText="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="DETALLE DE PAGO"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/pcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20px"
+        android:layout_marginTop="20px"
+
+        android:background="@android:drawable/dialog_holo_light_frame"
+
+        app:layout_constraintTop_toBottomOf="@id/pptitulo"
+
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/pfecha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:text="12/12/1999"
+                android:textAlignment="textEnd"
+                android:textColor="@color/ABLUE"
+                android:textSize="14sp"
+                android:gravity="end" />
+
+            <TextView
+                android:id="@+id/ptotal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textAlignment="center"
+                android:textColor="@color/ABLUE"
+                android:textSize="30sp"
+                app:layout_constraintTop_toBottomOf="@id/pfecha"
+                android:gravity="center_horizontal" />
+
+            <TextView
+                android:id="@+id/ptextototal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="TOTAL"
+                android:textAlignment="center"
+                android:textColor="@color/ABLUE"
+                android:textSize="18sp"
+                app:layout_constraintTop_toBottomOf="@id/ptotal"
+                android:gravity="center_horizontal" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+
+        android:id="@+id/ppNotes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layoutAnimation="@anim/layout_animation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pcard">
+
+    </ListView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
